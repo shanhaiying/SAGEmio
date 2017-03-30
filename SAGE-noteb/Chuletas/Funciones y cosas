@@ -1,0 +1,189 @@
+factorial()
+f(a,b) = a*b   OR def f(a,b) return a*b
+f =ax+b -> print(f(a=1,b=2))
+
+7//2 da el cociente -> 3
+7%2 da el resto -> 1
+
+forget() elimina condiciones anteriores
+assume(abs(a) < 1)->impone una condición
+binomial(n,m)	
+
+%time
+time(instrucción) -> una vez
+timeit(instrucción) -> muchas veces y promedio
+
+.next()
+
+log(n, base=2)-> si no se pone base es ln
+
+map(f,L) -> lista de f con arg de la lista L (bucle)
+
+dato in ____ ->true or false
+type(A) ->dice de qué tipo es
+
+[1..10]-> 1,2,...,10
+
+.n()
+.n(digits=10)
+.divisors()
+
+a,b=2,a -> las asignaciones así se hacen justo a la vez, si a valía 3, b valdrá 3, 2 NO
+
+srange()->genera lista 
+xsrange()-> no genera lista
+
+SIMPLIFICACIÓN
+
+.expand() -> en monomios
+.factor() -> factoriza
+.expand_trig() -> en trigonométricas
+.simplify_exp -> en exponentes
+.simplify_rational -> en fracción
+
+GRÁFICAS PAG 35
+
+plot(f,(x,−2,2)))
+implicit plot(f,(x,−5,5),(y,−5,5))
+plot(f,0,2*pi)+plot(T2,0,2*pi,rgbcolor=(0,1,0),legend_label="T2")+plot(T4,0,2*pi,rgbcolor=(1,0,0),legend_label="T4")
+line(L)
+line2d(L)
+points(L)
+
+CÁLCULO
+
+solve(expresión, var,var...) -> resuelve ecuaciones solve([xˆ2+yˆ2==1,x−y+1],x,y)
+find_root(f,a,b) -> f(x)=0, x c [a,b]
+f1.limit(x=1)/x = oo 
+	und-> no hay lim
+	ind-> no hay lim pero está acotada
+sum(expresión, variable, lim_inf, lim_sup)
+g=f.derivative(orden)
+taylor(f,x,2,4)
+.integrate(x)/.integral()
+
+ÁLGEBRA PAG 44
+
+A=matrix(ZZ, [[ ], [ ]])
+slice-> A[2:5:7,4:7:2] -> de : a : incr
+M.solve_right(b) -> Resolvemos el sistema con matriz M y vector de términos independientes b
+
+
+LISTAS
+
+.prod()
+len()
+123.digits(base=tal (o no se pone na)) -> [3,2,1]
+L.sort()
+Letras = list('ABC') -> Letras = ['A',B','C']
++ concatena
+L.append(7)
+srange(i,k,d) -> de i a k-1 de d en d
+.reverse()
+.extend()
+.count() -> busca las veces que aparece algo
+.index(a) -> busca la prim pos donde aparece a
+.pop(índice)-> saca y me quedo con eso, la lista se queda sin el elem
+.remove(elemento)
+del[de:a] -> eliminan
+.insert() -> en pos determinada
+[j^2 for j in [1..5] if j.is_prime()]		
+prime_range(i,k) -> primos entre i y k-1
+
+factores = list(factor(tal)) -> [(2,4), (3,1)]
+for k in factores 
+for a,b in factores -> desempaquetan
+
+TUPLAS -> inmutables
+
+tuple()
++ concatena * repite
+d,u,v = xgdc(a,b) -> d -> MCD
+gdc(a,b) -> MCM
+
+CADENAS MIRAR LISTAS TMBN
+
+str(int) -> a string
++ *
+<cadena>.count<cadena1>
+.index
+fras.split(' ') -> trocea según ' '
+' '.join(palabras) || join(palabras, ' ') -> une
+.find('cadena', desde aquí, hasta aquí)
+
+CONJUNTOS
+
+A = {_}
+set(_)
+1 in A ->T/F
+A | B -> UNIÓN A & B -> INTERSECCIÓN A-B A<=B -> TRUE si todo elem de A está en B
+A.add(1) 
+A.remove(1)
+.update(l)->añade l al set
+.pop, .union, .intersection
+
+DICCIONARIO
+
+dicc = {clave1:valor1, clave2:valor2}
+del
+dict()
+dict(zip(L1,L2))->(L1[j],L2[j])
+formar listas:
+	.keys -> con claves
+	.values -> con valores
+	.items -> lista de pares
+Lista de pares a dicc -> 75
+Dos listas -> zip + 75
+
+
+bin(D), oct(D) y hex(D) devuelven cadenas de caracteres con la expresión de D en las bases 2, 8 y 16
+ZZ( 'expresion en base b' ,b) ->114
+
+116 -> potencia rápida
+power_mod(a,n,k)-> a^k
+power(a,k) -> a^k
+@parallel(2)
+
+CYTHON
+
+%cython y definir tipos, double, int (cdef int???)
+
+NUMPY->listas y matrices
+
+import numpy as np
+A=np.array([[1,2],[1,1]])
+prod de matrices -> A.dot(A)
+
+PRIMOS
+
+.next_prime()
+.is_prime()
+prime_range(N1,N2)
+primes(N1,N2)-> como iterador
+nth_prime(m) -> el primo m-ésimo
+
+APROXIMACIÓN
+
+n-N-numerical_approx -> dan un num de decimales finitos
+
+a = numerical_approx(pi, prec = 3) -> prec: num de dig en binario
+				   -> digits: num de dig en decimal
+a.str(base=2)
+
+NR = RealField(prec=n)
+NR(pi) -> fuerza a pi a estar en NR
+
+Error de "cancelación":  un error enorme que aparece al restar dos cantidades muy próximas que sólo difieren en cifras 
+			 más allá de la precisión que estamos usando en el cálculo.
+
+exact_rational()
+
+x^2 − dy^2 = 1 ->172
+
+Newton pa logaritmos -> 177-8
+
+find_fit(L, modelo)
+
+find_local_maximum(f,a,b) 
+find_local_minimum(f,a,b) -> no asegura ser el mayor/menor de los max/min
+find_root(f,a,b) -> 1 root, puede haber más?
