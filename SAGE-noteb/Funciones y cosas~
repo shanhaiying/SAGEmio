@@ -215,4 +215,3 @@ PROBABILIDAD
 random() -> num entre [0,1]
 randint(a,b) -> num entre [a,b]
 .count(1)
-A.random element()
