@@ -215,4 +215,7 @@ PROBABILIDAD
 random() -> num entre [0,1]
 randint(a,b) -> num entre [a,b]
 .count(1)
-A.random element()
+A.random_element()
+
+Grafo construido aleatoriamente->
+G = graphs.RandomGNP(n,p) -> show(G)
